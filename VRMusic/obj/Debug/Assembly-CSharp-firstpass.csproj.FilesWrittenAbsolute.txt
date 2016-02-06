@@ -1,0 +1,17 @@
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/trujano/Code/VRMusic/VRMusic/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/trujano/Code/VRMusic/VRMusic/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/UnityEngine.dll
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/UnityEditor.dll
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/Mono.Cecil.dll
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/Unity.DataContract.dll
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/trujano/Code/VRMusic/VRMusic/Temp/bin/Debug/Mono.Cecil.Mdb.dll
