@@ -32,7 +32,10 @@ public class LyricAnimator : MonoBehaviour {
 		sound = GetComponent<AudioSource>();
 
 
-		string lyricsStr = loadFileAsString ("Assets/Music/journey.lrc");
+//		string lyricsStr = loadFileAsString ("Assets/Music/journey.lrc");
+
+		TextAsset journey = Resources.Load("journey") as TextAsset; 
+		string lyricsStr = journey.text; 
 
 		lrc = ParseLRC (lyricsStr);
 		lyrics.text = lrc [0].Lyric;
@@ -50,7 +53,7 @@ public class LyricAnimator : MonoBehaviour {
 
 	List<LRCLine> ParseLRC(String input) {
 
-		string[] lines = input.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+		string[] lines = input.Split("\n"[0]);
 		List<LRCLine> output = new List<LRCLine> ();
 		for (int i = 0; i < lines.Length; i++) {
 			string line = lines [i];
