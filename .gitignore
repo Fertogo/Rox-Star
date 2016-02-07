@@ -1,2 +1,31 @@
-VRMusic/Temp
-VRMusic/Library
+# =============== #
+# Unity generated #
+# =============== #
+VRMusic/Temp/
+VRMusic/Library/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+VRMusic/ExportedObj/
+VRMusic/obj/
+VRMusic/*.svd
+VRMusic/*.userprefs
+VRMusic/*.csproj
+VRMusic/*.pidb
+VRMusic/*.suo
+VRMusic//*.sln
+VRMusic/*.user
+VRMusic/*.unityproj
+VRMusic/*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+VRMusic/.DS_Store
+VRMusic/.DS_Store?
+VRMusic/._*
+VRMusic/.Spotlight-V100
+VRMusic/.Trashes
+VRMusic/ehthumbs.db
+VRMusic/Thumbs.db
