@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{285D7F7E-2BD0-1CA8-8076-7C7F0EBF75A6}") = "VRMusic2", "Assembly-CSharp-firstpass.csproj", "{DC840157-5C10-D19F-B5E2-6A82B89CFAA0}"
+EndProject
+Project("{285D7F7E-2BD0-1CA8-8076-7C7F0EBF75A6}") = "VRMusic2", "Assembly-CSharp.csproj", "{5F56F84A-1B48-15A4-A96F-05E453151A1A}"
+EndProject
+Project("{285D7F7E-2BD0-1CA8-8076-7C7F0EBF75A6}") = "VRMusic2", "Assembly-CSharp-Editor.csproj", "{65B6ABC4-CD29-7F5A-DB71-F2C97A5E8802}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC840157-5C10-D19F-B5E2-6A82B89CFAA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC840157-5C10-D19F-B5E2-6A82B89CFAA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC840157-5C10-D19F-B5E2-6A82B89CFAA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC840157-5C10-D19F-B5E2-6A82B89CFAA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F56F84A-1B48-15A4-A96F-05E453151A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F56F84A-1B48-15A4-A96F-05E453151A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F56F84A-1B48-15A4-A96F-05E453151A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F56F84A-1B48-15A4-A96F-05E453151A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65B6ABC4-CD29-7F5A-DB71-F2C97A5E8802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65B6ABC4-CD29-7F5A-DB71-F2C97A5E8802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65B6ABC4-CD29-7F5A-DB71-F2C97A5E8802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65B6ABC4-CD29-7F5A-DB71-F2C97A5E8802}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

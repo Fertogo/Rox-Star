@@ -23,11 +23,28 @@ public class LyricAnimator : MonoBehaviour {
 	TextMesh nextLyrics;
 	AudioSource sound;
 	List<LRCLine> lrc;
+	List<LRCLine> effects;
 	int currentLrc = 0;
+	int currentEffect = 0;
+
+	float lyricDelaySeconds = 1;
+	float lightTimer = 0;
 
 
+
+	public Transform crowdDude;
+	dudeDuplicator dDup;
+
+	Light backlightLeft, backlightRight;
 	// Use this for initialization
 	void Start () {
+
+
+
+		//crowdDude = (GameObject) GameObject.Find("Guitar").GetComponent<UnityEngine.GameObject>();
+		//Debug.Log ("what my name is " + crowdDude.name);
+		dDup = (dudeDuplicator) crowdDude.GetComponent<dudeDuplicator> ();
+
 		lyrics = GetComponent<UnityEngine.TextMesh>();
 		sound = GetComponent<AudioSource>();
 
@@ -36,7 +53,7 @@ public class LyricAnimator : MonoBehaviour {
 
 		TextAsset journey = Resources.Load("journey") as TextAsset; 
 		string lyricsStr = journey.text; 
-
+		effects = new List<LRCLine> ();
 		lrc = ParseLRC (lyricsStr);
 		lyrics.text = lrc [0].Lyric;
 
@@ -49,6 +66,12 @@ public class LyricAnimator : MonoBehaviour {
 		sound.Play ();
 		sound.Play(44100);
 
+
+
+
+		backlightLeft = (Light) GameObject.Find("backlightLeft").GetComponent<UnityEngine.Light>();
+		backlightRight = (Light) GameObject.Find("backlightRight").GetComponent<UnityEngine.Light>();
+
 	}
 
 	List<LRCLine> ParseLRC(String input) {
@@ -60,11 +83,20 @@ public class LyricAnimator : MonoBehaviour {
 
 			if (System.Text.RegularExpressions.Regex.IsMatch (line, "^\\[[0-9].*")) {
 				LRCLine lrc = new LRCLine ();
+
+
+
 				lrc.Lyric = line.Substring(line.IndexOf("]")+1);
 				String timing = line.Substring (1, line.IndexOf ("]") - 1);
 				float time = (float) TimeSpan.Parse("00:" + timing).TotalSeconds;
+
+
 				lrc.TStart = time;
-				output.Add (lrc);
+				//Debug.Log (lrc.Lyric);
+				if (lrc.Lyric.Equals("*FX*\r"))
+					effects.Add (lrc);
+				else
+					output.Add (lrc);
 			}
 		}
 
@@ -74,11 +106,11 @@ public class LyricAnimator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-		float time = Time.fixedTime;
+		lightTimer += Time.deltaTime;
+		//float time = Time.fixedTime;
 
 		if (currentLrc+1 < lrc.Count) {
-			if (time > lrc [currentLrc+1].TStart) {
+			if (sound.time > lrc [currentLrc+1].TStart) {
 
 				lyrics.text = lrc [currentLrc + 1].Lyric;
 				prevLyrics.text = lrc [currentLrc].Lyric;
@@ -87,7 +119,23 @@ public class LyricAnimator : MonoBehaviour {
 				}
 				currentLrc++;
 			}
-				
+		}
+
+		if (currentEffect < effects.Count) {
+			if (sound.time > effects [currentEffect].TStart) {
+				// Trigger effect
+
+				dDup.exiteAudience ();
+				backlightRight.enabled = true;
+				backlightLeft.enabled = true;
+				lightTimer = 0;
+				currentEffect++;
+			}
+		}
+
+		if (lightTimer > 0.2 && backlightLeft.enabled) {
+			backlightLeft.enabled = false;
+			backlightRight.enabled = false;
 		}
 
 		/*lyrics.text = "hello";
