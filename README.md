@@ -12,3 +12,8 @@ For vocal enhancements, we used VSTs such as AutoTune, Reverb, Chorus, and autom
 For lyrics synchronization, we used a variation of the industry standard LRC format with augmented fields for light and audience cues.
 
 Since this project was written in Unity, it ports easily to any platform.
+
+
+---
+
+ [Submission for Hack@Brown 2016](http://devpost.com/software/rox-star). 
