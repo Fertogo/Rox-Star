@@ -13,6 +13,7 @@ For lyrics synchronization, we used a variation of the industry standard LRC for
 
 Since this project was written in Unity, it ports easily to any platform.
 
+Build it yourself, or see a [demo video](https://youtu.be/zd1loXWuhK8). 
 
 ---
 
